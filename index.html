@@ -7,7 +7,21 @@
     
     <title>Lista de tarefas</title>
 </head>
+<header>
+    <h1 class="titulo">Lista de tarefas</h1>
+
+    <form>
+    <label class="" for="nome">Insira sua tarefa</label>
+    <input name="nome" id="tarefa" type="text" data-tipo="oi" required>
+    <br>
+    <label class="" for="data">Deseja inserir uma data?</label>
+    <input type="date">
+    <br>
+    <button id="inserir_tarefa" onclick="inserirTarefa()">Guardar</button>
+    </form>
+</header>
 <body>
-    
+   
+<script src="./lista-de-tarefas.js"></script>
 </body>
 </html>
