@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./reset.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
     
     <title>Lista de tarefas</title>
 </head>
@@ -15,7 +17,7 @@
     <input name="nome" id="tarefa" type="text" data-tipo="oi" required>
     <br>
     <label class="" for="data">Deseja inserir uma data?</label>
-    <input type="date">
+    <input type="date" name="date" id="data_escolhida">
     <br>
     <button id="inserir_tarefa" onclick="inserirTarefa()">Guardar</button>
     </form>
