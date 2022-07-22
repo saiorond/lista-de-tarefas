@@ -14,6 +14,7 @@ body {
     width: 25em;    
     border: 1px solid rgb(58, 14, 99);
     border-radius: 12px;
+    box-shadow: 0 10px 10px 0 rgb(141, 135, 147)
 }
 
 .titulo {
@@ -39,8 +40,20 @@ body {
     padding: 10px;
 }
 
+#tarefa:focus {
+    outline: 0;
+    border-color: rgb(58, 14, 99);
+}
+
 #inserir_tarefa:hover {
     background: rgb(128, 77, 175);
     color:whitesmoke;
     transition: 0.5s;
+    cursor: pointer;
+}
+
+#inserir_tarefa:active {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 2px 2px;
+    color: rgb(174, 171, 171);
 }
