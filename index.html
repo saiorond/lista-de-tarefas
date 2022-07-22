@@ -13,20 +13,19 @@
     
     <title>Lista de tarefas</title>
 </head>
-<header class="formulario">
+<body>
+    <div class="caixa">
     <h1 class="titulo">Lista de tarefas</h1>
 
-    <form>
-    <label class="" for="nome">Qual é a sua tarefa?</label>
-    <input name="nome" id="tarefa" type="text" data-tipo="oi" required>
-    <br>
-    <label class="">Deseja inserir uma data?</label>
-    <input type="radio" name="date" id="data_escolhida">
-    <br>
+    <form class="formulario">
+    <input id="tarefa" type="text" placeholder="Qual a sua tarefa?" required>
+
     <button id="inserir_tarefa" onclick="inserirTarefa()">Guardar</button>
     </form>
-</header>
-<body>
+    </div>
+    <div class="mostrar_tarefas">
+        
+    </div>
    
 <script src="./lista-de-tarefas.js"></script>
 </body>
