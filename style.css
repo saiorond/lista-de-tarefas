@@ -10,9 +10,10 @@ body {
     align-items: center;
     flex-direction: column;
     margin: 40px;
-    padding: 30px 30px;
+    padding: 20px 20px;
     width: 25em;    
     border: 1px solid rgb(58, 14, 99);
+    border-radius: 12px;
 }
 
 .titulo {
@@ -20,9 +21,26 @@ body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
     color: rgb(58, 14, 99);
-    padding: 1rem;
+    padding: 20px;
 }
 
 .formulario {
     text-align: center;
+}
+
+#tarefa, #inserir_tarefa {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color:rgb(58, 14, 99);
+    border: 0.5px solid whitesmoke;
+    border-radius: 12px;
+    background: rgba(204, 204, 204, 0.929);
+    padding: 10px;
+}
+
+#inserir_tarefa:hover {
+    background: rgb(128, 77, 175);
+    color:whitesmoke;
+    transition: 0.5s;
 }
