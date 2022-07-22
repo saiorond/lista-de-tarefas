@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat&display=swap" rel="stylesheet">
     <link href="./reset.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
     
@@ -17,11 +17,11 @@
     <h1 class="titulo">Lista de tarefas</h1>
 
     <form>
-    <label class="" for="nome">Insira sua tarefa</label>
+    <label class="" for="nome">Qual é a sua tarefa?</label>
     <input name="nome" id="tarefa" type="text" data-tipo="oi" required>
     <br>
-    <label class="" for="data">Deseja inserir uma data?</label>
-    <input type="date" name="date" id="data_escolhida">
+    <label class="">Deseja inserir uma data?</label>
+    <input type="radio" name="date" id="data_escolhida">
     <br>
     <button id="inserir_tarefa" onclick="inserirTarefa()">Guardar</button>
     </form>
