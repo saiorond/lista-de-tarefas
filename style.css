@@ -1,20 +1,17 @@
 body {
     background: rgba(204, 204, 204, 0.929);
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    justify-content: center;
 }
 
 .caixa {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: block;
+    justify-content: center;
     margin: 40px;
     padding: 20px 20px;
     width: 25em;    
     border: 1px solid rgb(58, 14, 99);
     border-radius: 12px;
-    box-shadow: 0 10px 10px 0 rgb(141, 135, 147)
+    box-shadow: 0 10px 10px 0 rgb(141, 135, 147);
 }
 
 .titulo {
@@ -56,4 +53,12 @@ body {
     transform: scale(1.1);
     box-shadow: 3px 3px 2px 2px;
     color: rgb(174, 171, 171);
+}
+
+.mostrar_tarefas {
+    background: red;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1em;
 }
