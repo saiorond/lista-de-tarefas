@@ -12,4 +12,17 @@
 //    format.replace('aa', date.getFullYear())
 //}
 
-var dataEscolhida = document.getElementById('data_escolhida').value 
+const input = document.querySelector("#tarefa");
+const botao = document.querySelector("#inserir_tarefa");
+
+const validaInput = () => input.value.trim().length > 0; 
+
+function addTarefa() {
+    const inputIsValid = validaInput();
+
+    if (!inputIsValid) {
+        return input.classList.add("error");
+    }
+}
+
+botao.addEventListener("click", () => addTarefa());
