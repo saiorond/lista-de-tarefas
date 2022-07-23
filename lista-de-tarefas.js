@@ -25,4 +25,13 @@ function addTarefa() {
     }
 }
 
+function mudancaInput() {
+    const inputIsValid = validaInput();
+
+    if (inputIsValid) {
+        return input.classList.remove("error");
+    }
+}
+
 botao.addEventListener("click", () => addTarefa());
+input.addEventListener("change", () => mudancaInput());

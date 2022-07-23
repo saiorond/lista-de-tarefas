@@ -60,3 +60,11 @@ body {
 .mostrar_tarefas {
     background: red;
 }
+
+ .error {
+    border: 2px solid red !important;
+ }
+
+ .error::placeholder {
+    color: red;
+ }
