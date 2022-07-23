@@ -15,6 +15,8 @@
 const input = document.querySelector("#tarefa");
 const botao = document.querySelector("#inserir_tarefa");
 
+const mostraTarefa = document.querySelector(".mostrar_tarefas") 
+
 const validaInput = () => input.value.trim().length > 0; 
 
 function addTarefa() {
@@ -23,6 +25,21 @@ function addTarefa() {
     if (!inputIsValid) {
         return input.classList.add("error");
     }
+
+    const tarefaContainer = document.createElement('div');
+    tarefaContainer.classList.add("tarefa-item");
+
+    const textoTarefa = document.createElement("p");
+    textoTarefa.innerText = input.value;
+
+    const iconeDelete = document.createElement("i");
+    iconeDelete.classList.add("fa-solid");
+    iconeDelete.classList.add("fa-trash-can");
+
+    tarefaContainer.appendChild(textoTarefa);
+    tarefaContainer.appendChild(iconeDelete);
+
+    mostraTarefa.appendChild(tarefaContainer);
 }
 
 function mudancaInput() {
