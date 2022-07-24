@@ -7,6 +7,8 @@ body {
 }
 
 .caixa {
+    display: block;
+    text-align: center;
     justify-content: center;
     margin: 40px;
     padding: 20px 20px;
@@ -22,10 +24,6 @@ body {
     text-align: center;
     color: rgb(58, 14, 99);
     padding: 20px;
-}
-
-.formulario {
-    text-align: center;
 }
 
 #tarefa, #inserir_tarefa {
@@ -58,11 +56,18 @@ body {
 }
 
 .mostrar_tarefa {
-    background: red;
-    padding: 30px 20px;
+    background-color: rgb(174, 171, 171);
+    padding: 10px 10px;
     margin-top: 60px;
     border-radius: 12px;
-    width: 100%;
+}
+
+.tarefa-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
 }
 
  .error {
