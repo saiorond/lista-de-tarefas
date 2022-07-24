@@ -1,23 +1,10 @@
-//const date = new Date();
-
-//const ano = date.getFullYear();
-//const dia = date.getDate();
-//const mes = date.getMonth() + 1;
-
-//function formatarData(date, format) {
-//    formatDate(today, 'dd/mm/aa');
-
-//    format.replace('dd',getDate())
-//    format.replace('mm', date.getMonth() + 1)
-//    format.replace('aa', date.getFullYear())
-//}
-
-const input = document.querySelector("#tarefa");
+const campoInput = document.querySelector("#tarefa");
 const botao = document.querySelector("#inserir_tarefa");
+console.log(campoInput, botao)
 
-const mostraTarefa = document.querySelector(".mostrar_tarefas") 
+const mostraTarefa = document.querySelector(".mostrar_tarefa"); 
 
-const validaInput = () => input.value.trim().length > 0; 
+const validaInput = () => campoInput.value.trim().length > 0; 
 
 function addTarefa() {
     const inputIsValid = validaInput();
@@ -25,14 +12,14 @@ function addTarefa() {
     console.log(inputIsValid)
 
     if (!inputIsValid) {
-        return input.classList.add("error");
+        return campoInput.classList.add("error");
     }
 
     const tarefaContainer = document.createElement('div');
     tarefaContainer.classList.add("tarefa-item");
 
     const textoTarefa = document.createElement("p");
-    textoTarefa.innerHTML = input.value;
+    textoTarefa.innerHTML = campoInput.value;
 
     const iconeDelete = document.createElement("i");
     iconeDelete.classList.add("fa-solid");
@@ -48,10 +35,10 @@ function mudancaInput() {
     const inputIsValid = validaInput();
 
     if (inputIsValid) {
-        return input.classList.remove("error");
+        return campoInput.classList.remove("error");
     }
 }
 
 botao.addEventListener("click", () => addTarefa());
-input.addEventListener("change", () => mudancaInput());
+campoInput.addEventListener("change", () => mudancaInput());
 console.log(addTarefa)
