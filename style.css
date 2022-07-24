@@ -59,6 +59,10 @@ body {
 
 .mostrar_tarefas {
     background: red;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 12px;
+    width: 100%;
 }
 
  .error {

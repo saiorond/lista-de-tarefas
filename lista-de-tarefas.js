@@ -22,6 +22,8 @@ const validaInput = () => input.value.trim().length > 0;
 function addTarefa() {
     const inputIsValid = validaInput();
 
+    console.log(inputIsValid)
+
     if (!inputIsValid) {
         return input.classList.add("error");
     }
@@ -30,7 +32,7 @@ function addTarefa() {
     tarefaContainer.classList.add("tarefa-item");
 
     const textoTarefa = document.createElement("p");
-    textoTarefa.innerText = input.value;
+    textoTarefa.innerHTML = input.value;
 
     const iconeDelete = document.createElement("i");
     iconeDelete.classList.add("fa-solid");
@@ -52,3 +54,4 @@ function mudancaInput() {
 
 botao.addEventListener("click", () => addTarefa());
 input.addEventListener("change", () => mudancaInput());
+console.log(addTarefa)
