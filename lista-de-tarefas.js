@@ -29,7 +29,7 @@ function inserirTarefa() {
     iconeDelete.classList.add("fa-solid");
     iconeDelete.classList.add("fa-trash-can");
 
-    iconeDelete.addEventListener("click", () => deletarTarefa())
+    iconeDelete.addEventListener("click", () => deletarTarefa(tarefaContainer, tituloTarefa));
 
     tarefaContainer.appendChild(tituloTarefa);
     tarefaContainer.appendChild(textoTarefa);
@@ -46,6 +46,16 @@ function concluirTarefa(tituloTarefa) {
     for (const task of tasks) {
         if(task.firstChild.isSameNode(tituloTarefa)) {
             task.firstChild.classList.toggle("completed");
+        }
+    }
+}
+
+function deletarTarefa(tarefaContainer, tituloTarefa) {
+    const tasks = mostraTarefa.childNodes;
+
+    for (const task of tasks) {
+        if (task.firstChild.isSameNode(tituloTarefa)) {
+            tarefaContainer.remove()
         }
     }
 }

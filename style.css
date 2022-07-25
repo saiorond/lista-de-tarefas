@@ -1,19 +1,18 @@
 body {
     background: rgba(204, 204, 204, 0.929);
     font-family: 'Montserrat', sans-serif;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    width: 1045px;
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
 }
 
 .caixa {
     display: block;
     text-align: center;
+    max-width: 25em;
     justify-content: center;
     margin: 40px;
-    padding: 20px 20px;
-    width: 25em;    
+    padding: 20px 20px;   
     border: 1px solid rgb(58, 14, 99);
     border-radius: 12px;
     box-shadow: 0 10px 10px 0 rgb(141, 135, 147);
