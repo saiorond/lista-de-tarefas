@@ -20,6 +20,8 @@ function inserirTarefa() {
     const tituloTarefa = document.createElement("h3");
     tituloTarefa.innerText = campoInput.value;
 
+    tituloTarefa.addEventListener("click", () => concluirTarefa(tituloTarefa));
+
     const textoTarefa = document.createElement("input");
     textoTarefa.inputMode = campoInput.value;
 
@@ -27,12 +29,26 @@ function inserirTarefa() {
     iconeDelete.classList.add("fa-solid");
     iconeDelete.classList.add("fa-trash-can");
 
+    iconeDelete.addEventListener("click", () => deletarTarefa())
+
     tarefaContainer.appendChild(tituloTarefa);
     tarefaContainer.appendChild(textoTarefa);
     tarefaContainer.appendChild(iconeDelete);
 
     mostraTarefa.appendChild(tarefaContainer);
+    
+    campoInput.value = "";
 };
+
+function concluirTarefa(tituloTarefa) {
+    const tasks = mostraTarefa.childNodes;
+
+    for (const task of tasks) {
+        if(task.firstChild.isSameNode(tituloTarefa)) {
+            task.firstChild.classList.toggle("completed");
+        }
+    }
+}
 
 function mudancaInput() {
     const inputValido = validaInput();

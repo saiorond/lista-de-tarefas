@@ -89,10 +89,21 @@ input:active {
     margin: 12px;
 }
 
+.tarefa-item i {
+    color:rgb(58, 14, 99);
+    background: rgb(141, 135, 147);
+    padding: 10px;
+    border-radius: 5px;
+}
+
  .error {
     border: 2px solid red !important;
  }
 
  .error::placeholder {
     color: red;
+ }
+
+ .completed {
+    text-decoration: line-through;
  }
