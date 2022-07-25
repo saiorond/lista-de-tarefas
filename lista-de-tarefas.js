@@ -21,7 +21,7 @@ function inserirTarefa() {
     tituloTarefa.innerText = campoInput.value;
 
     const textoTarefa = document.createElement("input");
-    textoTarefa.innerText = campoInput.value;
+    textoTarefa.inputMode = campoInput.value;
 
     const iconeDelete = document.createElement("i");
     iconeDelete.classList.add("fa-solid");
