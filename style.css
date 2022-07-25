@@ -105,6 +105,10 @@ input:active {
     margin: 10px;
 }
 
+.tarefa-item i:hover {
+    cursor: pointer;
+}
+
  .error {
     border: 2px solid red !important;
  }
