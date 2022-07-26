@@ -38,6 +38,8 @@ function inserirTarefa() {
     mostraTarefa.appendChild(tarefaContainer);
     
     campoInput.value = "";
+
+    atualizaLocalStoroge()
 };
 
 function concluirTarefa(tituloTarefa) {
@@ -48,6 +50,8 @@ function concluirTarefa(tituloTarefa) {
             task.firstChild.classList.toggle("completed");
         }
     }
+
+    atualizaLocalStoroge()
 }
 
 function deletarTarefa(tarefaContainer, tituloTarefa) {
@@ -58,6 +62,8 @@ function deletarTarefa(tarefaContainer, tituloTarefa) {
             tarefaContainer.remove()
         }
     }
+
+    atualizaLocalStoroge()
 }
 
 function mudancaInput() {
@@ -67,6 +73,19 @@ function mudancaInput() {
         return campoInput.classList.remove("error");
     }
 };
+
+function atualizaLocalStoroge() {
+    const tasks = mostraTarefa.childNodes;
+
+    const localStorageTarefas = [... tasks].map((task) => {
+        const content = task.firstChild;
+        const tarefaCompleta = content.classList.contains("completed");
+
+        return { description: content. innerText, tarefaCompleta};
+    });
+
+    localStorage.setItem("tasks", Json.stringify(localStorageTarefas));
+}
 
 //botao.addEventListener("click", () => inserirTarefa());
 campoInput.addEventListener("change", () => mudancaInput());
