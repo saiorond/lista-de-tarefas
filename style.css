@@ -2,15 +2,17 @@ body {
     background: rgba(204, 204, 204, 0.929);
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content:space-around;
-    text-align: center;
+    justify-content: center;   
 }
 
+.container {
+    width: 1300px;
+}
 .caixa {
-    display: block;
     text-align: center;
     max-width: 25em;
-    justify-content: center;
+    position: relative;
+    left: 30%;
     margin: 40px;
     padding: 20px 20px;   
     border: 1px solid rgb(58, 14, 99);
@@ -58,8 +60,11 @@ body {
 
 .mostrar_tarefa {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
+    flex-flow: row wrap;
+    width: 100%;
+    position: relative;
+    left: 6%;
+    margin-top: 40px;
     border-radius: 12px;
 }
 
