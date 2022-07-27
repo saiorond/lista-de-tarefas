@@ -89,6 +89,8 @@ function atualizaLocalStoroge() {
 
     function atualizaTarefas() {
         const tarefasNoLocalStorage = JSON.parse(localStorage.getItem("tasks"))
+
+        if (!tarefasNoLocalStorage) return;
     
         for(const tasks of tarefasNoLocalStorage) {
             const tarefaContainer = document.createElement("div");
@@ -96,9 +98,9 @@ function atualizaLocalStoroge() {
 
 
             const tituloTarefa = document.createElement("h3");
-            tituloTarefa.innerText = task.description;
+            tituloTarefa.innerText = tasks.description;
 
-            if(task.tarefaCompleta) {
+            if(tasks.tarefaCompleta) {
                 tituloTarefa.classList.add("completed");
             }
 
