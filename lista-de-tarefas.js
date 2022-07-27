@@ -84,8 +84,44 @@ function atualizaLocalStoroge() {
         return { description: content. innerText, tarefaCompleta};
     });
 
-    localStorage.setItem("tasks", Json.stringify(localStorageTarefas));
+    localStorage.setItem("tasks", JSON.stringify(localStorageTarefas));
 }
+
+    function atualizaTarefas() {
+        const tarefasNoLocalStorage = JSON.parse(localStorage.getItem("tasks"))
+    
+        for(const tasks of tarefasNoLocalStorage) {
+            const tarefaContainer = document.createElement("div");
+            tarefaContainer.classList.add("tarefa-item");
+
+
+            const tituloTarefa = document.createElement("h3");
+            tituloTarefa.innerText = task.description;
+
+            if(task.tarefaCompleta) {
+                tituloTarefa.classList.add("completed");
+            }
+
+            tituloTarefa.addEventListener("click", () => concluirTarefa(tituloTarefa));
+
+            const textoTarefa = document.createElement("input");
+            textoTarefa.inputMode = campoInput.value;
+
+            const iconeDelete = document.createElement("i");
+            iconeDelete.classList.add("fa-solid");
+            iconeDelete.classList.add("fa-trash-can");
+
+            iconeDelete.addEventListener("click", () => deletarTarefa(tarefaContainer, tituloTarefa));
+
+            tarefaContainer.appendChild(tituloTarefa);
+            tarefaContainer.appendChild(textoTarefa);
+            tarefaContainer.appendChild(iconeDelete);
+
+            mostraTarefa.appendChild(tarefaContainer);
+        }
+    }  
+
+    atualizaTarefas();
 
 //botao.addEventListener("click", () => inserirTarefa());
 campoInput.addEventListener("change", () => mudancaInput());
