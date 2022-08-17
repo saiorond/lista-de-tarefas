@@ -2,7 +2,7 @@ body {
     background: rgba(204, 204, 204, 0.929);
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content: center;   
+    justify-content: center;
 }
 
 .container {
@@ -126,3 +126,29 @@ input:active {
     text-decoration: line-through;
     color: gray;
  }
+
+ @media screen and (max-width:450px) {
+    .container {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .caixa {
+        max-width: 350px;
+        left: 3%;
+    }
+
+    .mostrar_tarefa {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .tarefa-item {
+        max-width: 180px;
+    }
+
+}
