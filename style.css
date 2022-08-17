@@ -145,6 +145,7 @@ input:active {
         display: flex;
         align-items: center;
         padding: 5px;
+        flex-direction: column;
     }
 
     .tarefa-item {
